@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import LargeLoader from "../shared/Loader"
 
 const Header = ({ token }) => {
   const [user, setUser] = useState(null);
@@ -23,7 +24,7 @@ const Header = ({ token }) => {
       <span>Hola, {user.display_name}</span>
     </header>
   ) : (
-    <p>Cargando usuario...</p>
+   <LargeLoader/>
   );
 };
 
