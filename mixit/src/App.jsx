@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { getTokenFromUrl } from "./utils/spotify";
 import Login from "./components/Login";
 import Home from "./pages/Home";
+import MixResult from "./components/MixResult";
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
           element={token ? <Navigate to="/home" /> : <Login />}
         />
         <Route path="/home" element={<Home token={token} />} />
-        <Route path="/mix" element={<div> proximamente</div>} /> {/* cuando esté listo */}
+        <Route path="/mix" element={<MixResult/>} /> {/* cuando esté listo */}
       </Routes>
     </Router>
   );
