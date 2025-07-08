@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import LargeLoader from "../shared/Loader"
+import Loader from "../shared/Loader"
 const MixResult = () => {
   const location = useLocation();
   const { tracks } = location.state || {};
@@ -84,7 +84,7 @@ const MixResult = () => {
       {!tracks || tracks.length === 0 ? (
         <p>No hay canciones seleccionadas.</p>
       ) : videoIds.length === 0 ? (
-       <LargeLoader/>
+       <Loader/>
       ) : (
         <div>
           <p>
